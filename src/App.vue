@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Nav />
+    <link-bar />
+    <Main />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Nav from "./components/Nav.vue";
+import LinkBar from "./components/LinkBar.vue";
+import Main from "./components/Main";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Nav,
+    LinkBar,
+    Main,
+  },
+  async created() {
+    const r = await fetch("https://panjs.com/ywc18.json");
+    const data = await r.json();
+    // this.categories = data.categories;
+    this.$store.state.provinces = data.provinces;
+    this.$store.state.merchants = data.merchants;
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
 }
 </style>

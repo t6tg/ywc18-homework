@@ -1,0 +1,50 @@
+<template>
+  <div class="main">
+    <div class="content">
+      <h3>ผลการค้นหา ร้านอาหารและเครื่องดื่ม ทั้งหมด</h3>
+      <div class="section">
+        <Categories />
+        <card-list />
+      </div>
+    </div>
+  </div>
+</template>
+<style scoped>
+.main {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, white, #1890ff);
+}
+
+.content {
+  width: 95%;
+  margin: auto;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 20px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    display: block;
+    height: 100%;
+  }
+  .section {
+    grid-template-columns: 100%;
+  }
+}
+</style>
+<script>
+import CardList from "./CardList.vue";
+import Categories from "./Categories";
+export default {
+  components: {
+    Categories,
+    CardList,
+  },
+};
+</script>
