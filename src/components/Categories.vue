@@ -1,6 +1,6 @@
 <template>
   <div class="categories">
-    <h3>ประเภทร้านค้า</h3>
+    <div class="categories-text">ประเภทร้านค้า</div>
     <div class="store-categories">
       <div>
         <input type="radio" name="categories" id="categories" checked /> ทั้งหมด
@@ -15,8 +15,8 @@
     </div>
     <h3>จังหวัด/ใกล้ฉัน</h3>
     <select name="provinces" id="near-categories">
-      <option value="">พิ้นที่ใกล้ฉัน</option>
-      <option value="">พื้นที่ทั้งหมด</option>
+      <option value="">📌 พิ้นที่ใกล้ฉัน</option>
+      <option value="">🗺 พื้นที่ทั้งหมด</option>
       <option value="" disabled>-----------------------------</option>
       <option
         v-for="(province, index) in this.$store.state.provinces"
@@ -60,10 +60,15 @@
   </div>
 </template>
 <style scoped>
+.categories-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
 .categories {
   border: solid 1px rgb(156, 156, 156);
   background: white;
-  padding: 10px;
+  padding: 20px;
   height: fit-content;
 }
 
@@ -78,10 +83,12 @@
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
+  width: 20px;
+  -webkit-transform: scale(1.3);
 }
 
 #near-categories {
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding: 10px;
 }

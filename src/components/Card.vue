@@ -14,15 +14,15 @@
       <div class="merchant-detail">
         <span>{{ merchant.subcategoryName }} | </span>
         <span v-show="merchant.priceLevel == 1"
-          ><span class="no-price">$</span>$$$</span
+          ><span class="no-price">฿</span>฿฿฿</span
         >
         <span v-show="merchant.priceLevel == 2"
-          ><span class="no-price">$$</span>$$</span
+          ><span class="no-price">฿฿</span>฿฿</span
         >
         <span v-show="merchant.priceLevel == 3"
-          ><span class="no-price">$$$</span>$</span
+          ><span class="no-price">฿฿฿</span>฿</span
         >
-        <span class="no-price" v-show="merchant.priceLevel == 4">$$$$</span>
+        <span class="no-price" v-show="merchant.priceLevel == 4">฿฿฿฿</span>
         | {{ merchant.addressDistrictName }} {{ merchant.addressProvinceName }}
       </div>
       <hr />
@@ -121,7 +121,7 @@ export default {
 .card {
   display: grid;
   grid-template-columns: 250px auto;
-  gap: 20px;
+  gap: 5px;
   padding: 5px;
   word-wrap: break-word;
   border: rgb(218, 219, 220) solid 1px;
