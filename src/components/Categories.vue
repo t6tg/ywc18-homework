@@ -1,63 +1,62 @@
 <template>
   <div class="categories">
     <h3>ประเภทร้านค้า</h3>
-    <input type="radio" name="categories" id="categories" checked />
-    ทั้งหมด<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านอาหารและเครื่องดื่ม<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านค้า OTOP<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านธงฟ้า<br />
-    <input type="radio" name="categories" id="categories" />
-    สินค้าทั่วไป<br />
+    <div class="store-categories">
+      <div>
+        <input type="radio" name="categories" id="categories" checked /> ทั้งหมด
+      </div>
+      <div
+        v-for="(category, index) in this.$store.state.categories"
+        :key="index"
+      >
+        <input type="radio" name="categories" id="categories" />
+        {{ category.name }}
+      </div>
+    </div>
     <h3>จังหวัด/ใกล้ฉัน</h3>
-    <select name="" id="near-categories">
-      <option value="">พิ้นที่ใกล็ฉัน</option>
-      <option value="">พิ้นที่ใกล็ฉัน</option>
-      <option value="">พิ้นที่ใกล็ฉัน</option>
-      <option value="">พิ้นที่ใกล็ฉัน</option>
-      <option value="">พิ้นที่ใกล็ฉัน</option>
+    <select name="provinces" id="near-categories">
+      <option value="">พิ้นที่ใกล้ฉัน</option>
+      <option value="">พื้นที่ทั้งหมด</option>
+      <option value="" disabled>-----------------------------</option>
+      <option
+        v-for="(province, index) in this.$store.state.provinces"
+        :key="index"
+        :value="province"
+      >
+        {{ province }}
+      </option>
     </select>
     <h3>ราคา</h3>
-    <select name="" id="near-categories">
-      <option value="">พิ้นที่ใกล็ฉัน</option>
-      <option value="">พิ้นที่ใกล็ฉัน</option>
-      <option value="">พิ้นที่ใกล็ฉัน</option>
-      <option value="">พิ้นที่ใกล็ฉัน</option>
-      <option value="">พิ้นที่ใกล็ฉัน</option>
+    <select name="priceRange" id="near-categories">
+      <option value="-" disabled selected>กรุณาเลือก</option>
+      <option
+        v-for="(priceRange, index) in this.$store.state.priceRange"
+        :key="index"
+        value="priceRange"
+      >
+        {{ priceRange }}
+      </option>
     </select>
     <h3>ประเภทร้านอาหารแหละเครื่องดื่ม</h3>
-    <input type="radio" name="categories" id="categories" checked />
-    ทั้งหมด<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านอาหารและเครื่องดื่ม<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านค้า OTOP<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านธงฟ้า<br />
-    <input type="radio" name="categories" id="categories" />
-    สินค้าทั่วไป<br />
-    <input type="radio" name="categories" id="categories" checked />
-    ทั้งหมด<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านอาหารและเครื่องดื่ม<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านค้า OTOP<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านธงฟ้า<br />
-    <input type="radio" name="categories" id="categories" />
-    สินค้าทั่วไป<br />
-    <input type="radio" name="categories" id="categories" checked />
-    ทั้งหมด<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านอาหารและเครื่องดื่ม<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านค้า OTOP<br />
-    <input type="radio" name="categories" id="categories" />
-    ร้านธงฟ้า<br />
-    <input type="radio" name="categories" id="categories" />
-    สินค้าทั่วไป<br />
+    <form class="store-categories">
+      <div>
+        <input type="radio" name="subcategories" id="all" value="all" checked />
+        <label for="all"> ทั้งหมด</label>
+      </div>
+      <div
+        v-for="(subcategories, index) in this.$store.state.categories[0]
+          .subcategories"
+        :key="index"
+      >
+        <input
+          type="radio"
+          name="subcategories"
+          :id="subcategories"
+          :value="subcategories"
+        />
+        <label :for="subcategories"> {{ subcategories }}</label>
+      </div>
+    </form>
   </div>
 </template>
 <style scoped>
@@ -65,7 +64,12 @@
   border: solid 1px rgb(156, 156, 156);
   background: white;
   padding: 10px;
-  height: auto;
+  height: fit-content;
+}
+
+.store-categories {
+  display: grid;
+  gap: 5px;
 }
 
 #text-categories {
@@ -79,7 +83,6 @@ input[type="radio"] {
 #near-categories {
   width: 90%;
   margin: auto;
-  height: 35px;
   padding: 10px;
 }
 @media screen and (max-width: 600px) {

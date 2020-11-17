@@ -22,9 +22,10 @@ export default {
   async created() {
     const r = await fetch("https://panjs.com/ywc18.json");
     const data = await r.json();
-    // this.categories = data.categories;
+    this.$store.state.categories = data.categories;
     this.$store.state.provinces = data.provinces;
     this.$store.state.merchants = data.merchants;
+    this.$store.state.priceRange = data.priceRange;
   },
 };
 </script>
@@ -35,6 +36,13 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Kanit", sans-serif;
+  background: url("./assets/bg.png");
+  background-position: center;
+}
+button,
+select,
+input {
   font-family: "Kanit", sans-serif;
 }
 </style>

@@ -7,6 +7,7 @@
     >
       <Card :merchant="merchant" />
     </div>
+    <button class="btn-more">ดูเพิ่มเติม</button>
   </div>
 </template>
 
@@ -21,4 +22,16 @@ export default {
 </script>
 
 <style>
+.btn-more {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 50%;
+  border-radius: 10px;
+  border: none;
+  padding: 18px;
+  outline: none;
+  cursor: pointer;
+  background: #fff;
+}
 </style>

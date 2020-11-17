@@ -12,8 +12,7 @@
 <style scoped>
 .main {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, white, #1890ff);
+  height: auto;
 }
 
 .content {

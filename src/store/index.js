@@ -7,6 +7,8 @@ export default new Vuex.Store({
   state: {
     provinces: [],
     merchants: [],
+    categories: [],
+    priceRange: [],
   },
   mutations: {},
   actions: {},
