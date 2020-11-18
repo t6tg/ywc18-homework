@@ -15,4 +15,4 @@ jobs:
       - name: Install Dependency
         run: npm install
       - name: scritp
-        run: ./deploy.sh
+        run: sudo ./deploy.sh
