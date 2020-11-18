@@ -26,6 +26,7 @@
                 value=""
                 :v-model="search"
                 v-on:keydown="Search"
+                enterkeyhint="search"
             />
             <button id="search-button">
                 <svg
