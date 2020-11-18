@@ -1,7 +1,13 @@
 <template>
   <div class="main">
     <div class="content">
-      <h3>ผลการค้นหา ร้านอาหารและเครื่องดื่ม ทั้งหมด</h3>
+      <h3>
+        ผลการค้นหา
+        <span v-show="this.$store.state.category_pick != 'ทั้งหมด'">{{
+          this.$store.state.category_pick
+        }}</span>
+        ทั้งหมด
+      </h3>
       <div class="section">
         <Categories />
         <card-list />

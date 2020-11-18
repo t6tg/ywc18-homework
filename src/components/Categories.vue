@@ -3,14 +3,29 @@
     <div class="categories-text">ประเภทร้านค้า</div>
     <div class="store-categories">
       <div>
-        <input type="radio" name="categories" id="categories" checked /> ทั้งหมด
+        <input
+          type="radio"
+          name="categories"
+          id="all_categories"
+          v-on:change="changeCategory"
+          v-model="category_pick"
+          value="ทั้งหมด"
+        />
+        <label for="all_categories">ทั้งหมด</label>
       </div>
       <div
         v-for="(category, index) in this.$store.state.categories"
         :key="index"
       >
-        <input type="radio" name="categories" id="categories" />
-        {{ category.name }}
+        <input
+          type="radio"
+          name="categories"
+          :id="category.name"
+          :value="category.name"
+          v-on:change="changeCategory"
+          v-model="category_pick"
+        />
+        <label :for="category.name">{{ category.name }}</label>
       </div>
     </div>
     <h3>จังหวัด/ใกล้ฉัน</h3>
@@ -37,26 +52,7 @@
         {{ priceRange }}
       </option>
     </select>
-    <h3>ประเภทร้านอาหารแหละเครื่องดื่ม</h3>
-    <form class="store-categories">
-      <div>
-        <input type="radio" name="subcategories" id="all" value="all" checked />
-        <label for="all"> ทั้งหมด</label>
-      </div>
-      <div
-        v-for="(subcategories, index) in this.$store.state.categories[0]
-          .subcategories"
-        :key="index"
-      >
-        <input
-          type="radio"
-          name="subcategories"
-          :id="subcategories"
-          :value="subcategories"
-        />
-        <label :for="subcategories"> {{ subcategories }}</label>
-      </div>
-    </form>
+    <subCategories :category="this.category_pick" />
   </div>
 </template>
 <style scoped>
@@ -99,5 +95,22 @@ input[type="radio"] {
 }
 </style>
 <script>
-export default {};
+import subCategories from "./subCategories";
+export default {
+  components: {
+    subCategories,
+  },
+  data: function () {
+    return {
+      category_pick: this.$store.state.category_pick,
+    };
+  },
+  methods: {
+    changeCategory() {
+      this.$store.state.category_pick = this.category_pick;
+      console.log(this.category_pick);
+      console.log(this.$store.state.category_pick);
+    },
+  },
+};
 </script>

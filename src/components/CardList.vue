@@ -18,6 +18,11 @@ export default {
   components: {
     Card,
   },
+  data: function () {
+    return {
+      mydata: [],
+    };
+  },
 };
 </script>
 
