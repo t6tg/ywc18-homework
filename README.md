@@ -1,24 +1,13 @@
-# ywc18-homework
+# ywc18-homework , Thanawat Gulati
 
-## Project setup
-```
-yarn install
-```
+### YWC 18 Homework ( Programming Major )
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+> Website : [ywc18-homework](https://t6tg.github.io/ywc18-homework)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### Tech stack and Tools
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+-   VueJS ( Front-end Framework )
+-   CSS - Stying Language ( 100% Non CSS Framework)
+-   Javascript - Scripting Language
+-   Prettier - Code Formatting
+-   Github Action - CI / CD for Build and Deploy Pipeline
