@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ywc18-homework/precache-manifest.e3043ef7476ad86bb51233d0c71cc13e.js"
+  "/ywc18-homework/precache-manifest.cc4c5f09c2615296e61e26693318f51d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ywc18-homework"});

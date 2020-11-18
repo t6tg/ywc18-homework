@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "49526a04df9ec0aa4c94",
+    "revision": "de24020a41fde654655b",
     "url": "/ywc18-homework/css/app.4e486f46.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ywc18-homework/img/halfhalf-logo.c1df95df.png"
   },
   {
-    "revision": "866a0544d5615a6dbda84223bb7068ca",
+    "revision": "6373fdd64278753b240a248464adea13",
     "url": "/ywc18-homework/index.html"
   },
   {
-    "revision": "49526a04df9ec0aa4c94",
-    "url": "/ywc18-homework/js/app.c0af6fa1.js"
+    "revision": "de24020a41fde654655b",
+    "url": "/ywc18-homework/js/app.00672099.js"
   },
   {
     "revision": "90388f266c16ef92f861",
