@@ -17,6 +17,9 @@
   display: inline-flex;
   margin: 10px;
 }
+#link-bar-home {
+  text-decoration: underline;
+}
 .bar {
   width: 80%;
   margin: auto;

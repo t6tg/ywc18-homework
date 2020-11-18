@@ -15,4 +15,4 @@ jobs:
       - name: Install Dependency
         run: npm install
       - name: scritp
-        run: sudo ./deploy.sh
+        run: chmod +x ./scripts/deploy.sh
