@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c92d92b2adb76fb40c46",
-    "url": "/ywc18-homework/css/app.9d888624.css"
+    "revision": "5ef270ed460957cfb63e",
+    "url": "/ywc18-homework/css/app.173e5558.css"
   },
   {
     "revision": "c3a9b276c341f38b93f7076544012d93",
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ywc18-homework/img/halfhalf-logo.c1df95df.png"
   },
   {
-    "revision": "2abdf73afd69783825f0892fa9598b6e",
+    "revision": "d2066d7765653a8411cbecb08edc1f4b",
     "url": "/ywc18-homework/index.html"
   },
   {
-    "revision": "c92d92b2adb76fb40c46",
-    "url": "/ywc18-homework/js/app.d255b5e9.js"
+    "revision": "5ef270ed460957cfb63e",
+    "url": "/ywc18-homework/js/app.8801297b.js"
   },
   {
-    "revision": "90388f266c16ef92f861",
-    "url": "/ywc18-homework/js/chunk-vendors.c3a51f2b.js"
+    "revision": "cef8101905e633c0083d",
+    "url": "/ywc18-homework/js/chunk-vendors.3bf63d9e.js"
   },
   {
     "revision": "089dd3921e4cd499a5285e1d698fa270",
