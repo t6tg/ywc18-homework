@@ -1,7 +1,6 @@
 <template>
     <div id="app">
         <Nav />
-        <m-filter />
         <link-bar />
         <Main />
     </div>
@@ -12,7 +11,6 @@
 import Nav from './components/Nav.vue'
 import LinkBar from './components/LinkBar.vue'
 import Main from './components/Main'
-import MFilter from './components/MFilter.vue'
 import { url } from '../config.js'
 
 export default {
@@ -20,8 +18,7 @@ export default {
     components: {
         Nav,
         LinkBar,
-        Main,
-        MFilter
+        Main
     },
     async created() {
         const r = await fetch(url)

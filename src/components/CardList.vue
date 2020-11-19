@@ -34,4 +34,9 @@ export default {
     cursor: pointer;
     background: #fff;
 }
+@media screen and (max-width: 600px) {
+    .btn-more {
+        width: 90%;
+    }
+}
 </style>

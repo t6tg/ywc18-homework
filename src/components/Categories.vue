@@ -91,6 +91,7 @@ input[type='radio'] {
 @media screen and (max-width: 600px) {
     .categories {
         display: none;
+        border: none;
     }
 }
 </style>
