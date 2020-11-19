@@ -106,10 +106,21 @@ export default {
         }
     },
     methods: {
-        changeCategory() {
+        async changeCategory() {
             this.$store.state.category_pick = this.category_pick
-            console.log(this.category_pick)
-            console.log(this.$store.state.category_pick)
+            if (this.$store.state.category_pick == 'ทั้งหมด') {
+                const r = await fetch('https://panjs.com/ywc18.json')
+                const data = await r.json()
+                this.$store.state.merchants = data.merchants
+            } else {
+                this.$store.state.merchants = (
+                    await (await fetch('https://panjs.com/ywc18.json')).json()
+                ).merchants.filter((o) => {
+                    return this.$store.state.category_pick.includes(
+                        o.categoryName
+                    )
+                })
+            }
         }
     }
 }

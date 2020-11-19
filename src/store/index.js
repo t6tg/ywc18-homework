@@ -9,6 +9,7 @@ export default new Vuex.Store({
         merchants: [],
         categories: [],
         priceRange: [],
+        filter: [],
         category_pick: 'ทั้งหมด'
     },
     mutations: {},

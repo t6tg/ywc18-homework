@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <Nav />
+        <m-filter />
         <link-bar />
         <Main />
     </div>
@@ -11,13 +12,15 @@
 import Nav from './components/Nav.vue'
 import LinkBar from './components/LinkBar.vue'
 import Main from './components/Main'
+import MFilter from './components/MFilter.vue'
 
 export default {
     name: 'App',
     components: {
         Nav,
         LinkBar,
-        Main
+        Main,
+        MFilter
     },
     async created() {
         const r = await fetch('https://panjs.com/ywc18.json')
@@ -25,6 +28,7 @@ export default {
         this.$store.state.categories = data.categories
         this.$store.state.provinces = data.provinces
         this.$store.state.merchants = data.merchants
+        this.$store.state.filter = data.merchants
         this.$store.state.priceRange = data.priceRange
     }
 }

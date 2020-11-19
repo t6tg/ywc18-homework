@@ -23,9 +23,6 @@
                 placeholder="ค้นหา ชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านค้า OTOP และสินค้าทั่วไป"
                 id="search-box"
                 name="search"
-                value=""
-                :v-model="search"
-                v-on:keydown="Search"
                 enterkeyhint="search"
             />
             <button id="search-button">
@@ -50,19 +47,7 @@
 </template>
 <script>
 export default {
-    name: 'Nav',
-    data: function () {
-        return {
-            search: ''
-        }
-    },
-    methods: {
-        Search() {
-            return this.$store.state.merchants.filter((r) => {
-                r.shopNameTH.includes(this.search)
-            })
-        }
-    }
+    name: 'Nav'
 }
 </script>
 <style scoped>

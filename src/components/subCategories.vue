@@ -11,11 +11,11 @@
                 <input
                     type="radio"
                     name="subcategories"
-                    id="all"
-                    value="all"
+                    id="ทั้งหมด"
+                    value="ทั้งหมด"
                     checked
                 />
-                <label for="all"> ทั้งหมด</label>
+                <label for="ทั้งหมด"> ทั้งหมด</label>
             </div>
             <div v-for="(subcategories, index) in this.mydata" :key="index">
                 <input
@@ -53,4 +53,10 @@ export default {
 </script>
 
 <style>
+input[type='radio'] {
+    box-sizing: border-box;
+    padding: 0;
+    width: 20px;
+    -webkit-transform: scale(1.3);
+}
 </style>
