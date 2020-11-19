@@ -96,6 +96,7 @@ input[type='radio'] {
 </style>
 <script>
 import subCategories from './subCategories'
+import { url } from '../../config.js'
 export default {
     components: {
         subCategories
@@ -109,12 +110,12 @@ export default {
         async changeCategory() {
             this.$store.state.category_pick = this.category_pick
             if (this.$store.state.category_pick == 'ทั้งหมด') {
-                const r = await fetch('https://panjs.com/ywc18.json')
+                const r = await fetch(url)
                 const data = await r.json()
                 this.$store.state.merchants = data.merchants
             } else {
                 this.$store.state.merchants = (
-                    await (await fetch('https://panjs.com/ywc18.json')).json()
+                    await (await fetch(url)).json()
                 ).merchants.filter((o) => {
                     return this.$store.state.category_pick.includes(
                         o.categoryName

@@ -17,11 +17,6 @@ export default {
     name: 'CardList',
     components: {
         Card
-    },
-    data: function () {
-        return {
-            mydata: []
-        }
     }
 }
 </script>

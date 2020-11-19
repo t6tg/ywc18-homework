@@ -112,6 +112,7 @@ nav {
     padding-top: 15px;
     padding-bottom: 0px;
     height: 50px;
+    background: #fff;
 }
 .navber {
     width: 80%;
