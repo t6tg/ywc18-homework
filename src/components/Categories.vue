@@ -66,6 +66,7 @@
     background: white;
     padding: 20px;
     height: fit-content;
+    margin-bottom: 25px;
 }
 
 .store-categories {
@@ -92,6 +93,7 @@ input[type='radio'] {
     .categories {
         display: none;
         border: none;
+        margin: 0px;
     }
 }
 </style>
