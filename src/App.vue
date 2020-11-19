@@ -13,6 +13,7 @@ import Nav from './components/Nav.vue'
 import LinkBar from './components/LinkBar.vue'
 import Main from './components/Main'
 import MFilter from './components/MFilter.vue'
+import { url } from '../config.js'
 
 export default {
     name: 'App',
@@ -23,7 +24,7 @@ export default {
         MFilter
     },
     async created() {
-        const r = await fetch('https://panjs.com/ywc18.json')
+        const r = await fetch(url)
         const data = await r.json()
         this.$store.state.categories = data.categories
         this.$store.state.provinces = data.provinces
