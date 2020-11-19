@@ -43,7 +43,7 @@
                 </option>
             </select>
             <input
-                type="text"
+                type="search"
                 placeholder="ค้นหา ชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านค้า OTOP และสินค้าทั่วไป"
                 id="search-box"
                 name="search"
