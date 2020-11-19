@@ -11,3 +11,4 @@
 -   Javascript - Scripting Language
 -   Prettier - Code Formatting
 -   Github Action - CI / CD for Build and Deploy Pipeline
+-   Progressive Web Apps ( PWA ) - Supported
