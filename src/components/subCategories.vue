@@ -53,10 +53,14 @@ export default {
 </script>
 
 <style>
+label {
+    cursor: pointer;
+}
 input[type='radio'] {
     box-sizing: border-box;
     width: 20px;
     margin: 8px;
     -webkit-transform: scale(1.3);
+    cursor: pointer;
 }
 </style>
