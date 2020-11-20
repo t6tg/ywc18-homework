@@ -10,6 +10,7 @@
                     v-on:change="changeCategory"
                     v-model="category_pick"
                     value="ทั้งหมด"
+                    checked
                 />
                 <label for="all_categories">ทั้งหมด</label>
             </div>
@@ -77,13 +78,6 @@
 #text-categories {
     margin: 10px;
 }
-input[type='radio'] {
-    box-sizing: border-box;
-    padding: 0;
-    width: 20px;
-    -webkit-transform: scale(1.3);
-}
-
 #near-categories {
     width: 100%;
     margin: auto;

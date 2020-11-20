@@ -55,8 +55,8 @@ export default {
 <style>
 input[type='radio'] {
     box-sizing: border-box;
-    padding: 0;
     width: 20px;
+    margin: 8px;
     -webkit-transform: scale(1.3);
 }
 </style>

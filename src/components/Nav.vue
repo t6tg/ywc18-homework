@@ -31,6 +31,7 @@
                 alt="half-min-logo"
                 id="min-logo"
             />
+
             <select name="location" id="location">
                 <option>📌 พื้นที่ใกล้ฉัน</option>
                 <option>🗺 สถานที่ทั้งหมด</option>
