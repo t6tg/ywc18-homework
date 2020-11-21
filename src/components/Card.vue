@@ -49,7 +49,7 @@
                 </span>
             </div>
             <div>
-                <div class="highlightText" v-html="merchant.highlightText">
+                <div class="highlightText" v-html-safe="merchant.highlightText">
                     {{ merchant.highlightText }}
                 </div>
                 <div
